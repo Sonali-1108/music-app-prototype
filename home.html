@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VibeRave</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">VibeRave ✨</h2>
+
+  <div class="profile" onclick="toggleMenu()">
+    👤 <span id="username"></span>
+    <div id="dropdown" class="dropdown">
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+ <p class="welcome">
+Good Evening ✨ Find music that matches your emotions
+</p>
+<section class="hero">
+
+<h1>How are you feeling today?</h1>
+
+<div class="mood-container">
+
+<div class="mood" onclick="selectMood('happy')">😊 Happy</div>
+<div class="mood" onclick="selectMood('sad')">😢 Sad</div>
+<div class="mood" onclick="selectMood('chill')">😌 Chill</div>
+<div class="mood" onclick="selectMood('romantic')">❤️ Romantic</div>
+
+</div>
+
+</section>
+
+
+<!-- AI CARD -->
+<div id="vibeBox" class="vibe-box">
+    <h3>Pick a mood and let the music flow✨</h3>
+</div>
+<!-- SONG SECTION -->
+<section>
+<h2 class="song-title">Songs For Your Mood</h2>
+<div id="songs-container" class="songs"></div>
+</section>
+
+
+<!-- PLAYER -->
+<audio id="player" controls class="player"></audio>
+
+<script src="home.js"></script>
+
+</body>
+<div class="bg-glow left"></div>
+<div class="bg-glow right"></div>
+</html>
+<div class="top-right">
+
+<select id="language" class="language-select">
+    <option value="english">English</option>
+    <option value="hindi">Hindi</option>
+    <option value="telugu">Telugu</option>
+</select>
+
+<div class="profile">👤</div>
+
+</div>
+<h2>Songs For Your Mood</h2>
+
+<audio id="player" controls>
+    <source id="audioSource" src="">
+</audio>
+<button onclick="playMood('happy')">😊 Happy</button>
+<button onclick="playMood('sad')">😢 Sad</button>
+<button onclick="playMood('chill')">😌 Chill</button>
+<script src="script.js"></script>
